@@ -1,8 +1,11 @@
-let numberOfProducts        // expects a Number 
+// Usage: getRandomInt(6)
+// Outputs a random number between 1 and 6
+function getRandomInt(max) {
+  return Math.floor(Math.random() * Math.floor(max)) + 1
+}
+
+let numberOfProducts        // expects a Number
 let products                // expects an Array of product data
-let product1
-let product2
-let product3
 let promotion1Description   // expects a String describing the promotion
 let promotion2Description   // expects a String describing the promotion
 let promotion3Description   // expects a String describing the promotion
@@ -24,48 +27,14 @@ let promotion3Icon          // expects a String (emoji)
 
 // HINTS
 // - Use Array.length to determine the total number of products/promotions in the database
-// - To generate a random number between 0 and x in Javascript:
-//   Math.floor(Math.random() * x)
+// - To generate a random number between 0 and x in Javascript, use our
+//   getRandomInt() function and pass it x (note that it's inclusive of both 0 and x).
 
 function pageLoad() {
   // 👇 YOUR CODE BEGINS HERE. DON'T CHANGE ANY OTHER CODE. 👇
 
   // 🔥🔥🔥 YOUR CODE GOES HERE 🔥🔥🔥
   console.log(database)
-  numberOfProducts = database.products.length
-  products = database.products
-  let promo1 = database.promotions[Math.floor(Math.random() * database.promotions.length)]
-  let promo2 = database.promotions[Math.floor(Math.random() * database.promotions.length)]
-  let promo3 = database.promotions[Math.floor(Math.random() * database.promotions.length)]
-  promotion1Description = promo1.description
-  promotion2Description = promo2.description
-  promotion3Description = promo3.description
-  if (promo1.type == 'discount') {
-    promotion1Icon = '🤑'
-  } else if (promo1.type == 'shipping') {
-    promotion1Icon = '🚛'
-  } else {
-    promotion1Icon = '🎰'
-  }
-  if (promo2.type == 'discount') {
-    promotion2Icon = '🤑'
-  } else if (promo2.type == 'shipping') {
-    promotion2Icon = '🚛'
-  } else {
-    promotion2Icon = '🎰'
-  }
-  if (promo3.type == 'discount') {
-    promotion3Icon = '🤑'
-  } else if (promo3.type == 'shipping') {
-    promotion3Icon = '🚛'
-  } else {
-    promotion3Icon = '🎰'
-  }
 
   //  👆 YOUR CODE ENDS HERE. DON'T CHANGE ANY OTHER CODE 👆
 }
-Viewport
-Window
-×
-×
-×
